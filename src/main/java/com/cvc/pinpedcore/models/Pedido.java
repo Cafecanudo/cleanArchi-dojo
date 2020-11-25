@@ -9,9 +9,10 @@ import java.util.List;
 @Builder
 public class Pedido {
 
-    private int id;
+    private Integer id;
     private String situacao;
+    private String uf;
+    private double valorFrete;
     private Fatura fatura;
     private List<Produto> produtos;
-
 }

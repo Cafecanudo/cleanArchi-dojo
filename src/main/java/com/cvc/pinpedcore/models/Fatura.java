@@ -10,6 +10,4 @@ public class Fatura {
     private double valor;
     private int parcelas;
     private Pedido pedido;
-
-
 }
