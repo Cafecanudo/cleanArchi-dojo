@@ -11,8 +11,8 @@ Sua equipe trabalha e uma parte muito maior de um projeto financeiro com focos e
 > - Permitir que informar um estado para tributação
 > - Permitir que informar o numero de cartão
 	> 	- Meio de pagamento(Credito ou Debito)
-	>	- Quantidade de Parcelas
-> - Efetuar a cobrança
+	>	-	Quantidade de Parcelas
+> - Transmitir dados da cobrança para API externa para efetuar a cobrança
 > - Exibir mensagens de cobranças de sucesso
 
 #### Requisitos funcionais
@@ -33,3 +33,11 @@ Sua equipe trabalha e uma parte muito maior de um projeto financeiro com focos e
 > - Código não pode ter dependências com bibliotecas externas, excepcionalmente Lombok*.
 > - Obrigatoriamente se divirtam ou parem.
 > - Escolham o modelo Dojo que mais gostam.
+
+#### Referencias de estrutura de Clean Architecture
+
+![](https://images.ctfassets.net/1es3ne0caaid/2zvDDUcdpuYqIM06WgU2sC/d706d509886f88be185fa007f6b43402/clean-architecture-ex-4.png)
+
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/o/open8tech/20190310/20190310035102.png)
+
+![](https://helpdev.com.br/wp-content/uploads/2020/05/Screenshot-from-2020-05-20-23-29-10.png)
