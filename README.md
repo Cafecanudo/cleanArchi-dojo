@@ -29,6 +29,8 @@ Sua equipe trabalha em uma parte muito maior de um projeto financeiro com focos 
 
 #### Referencias de estrutura de Clean Architecture
 
+![](https://marsner.com/wp-content/uploads/test-driven-development-TDD.png)
+
 ![](https://images.ctfassets.net/1es3ne0caaid/2zvDDUcdpuYqIM06WgU2sC/d706d509886f88be185fa007f6b43402/clean-architecture-ex-4.png)
 
 ![](https://cdn-ak.f.st-hatena.com/images/fotolife/o/open8tech/20190310/20190310035102.png)
