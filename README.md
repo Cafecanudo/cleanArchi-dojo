@@ -17,7 +17,10 @@ Sua equipe trabalha em uma parte muito maior de um projeto financeiro com focos 
 
 #### Requisitos funcionais
 > - Quando for informado os estados DF e GO deve-se cobrar R$ 40,00 de frete, quando informar PA deve-se cobrar R$ 55,00 de frete, quando for enviado para SP não deve se cobrar frete e para os demais cobrar R$ 20,00 frete.
+> - Quando for informado o estado de RJ, MG, DF devem ser cobrados 2.89% de tributos sobre o valor total da compra e 3.75% para os demais.
+>  - Quando for informado compra a credito e enviar para estados MG, DF e GO, deve-se dividir ICMS do produto em 2 e somar ao valor total da compra, para os demais deve-se somar o ICMS ao valor da compra.
 > - Não deve permitir concluir compra se cartão não possuir saldo.
+> - Salvar em banco de dados um log os dados da transação em string simples.
 
 #### Requisitos não funcionais
 > - Usar TDD
