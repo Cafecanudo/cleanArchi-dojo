@@ -17,22 +17,15 @@ Sua equipe trabalha em uma parte muito maior de um projeto financeiro com focos 
 
 #### Requisitos funcionais
 > - Quando for informado os estados DF e GO deve-se cobrar R$ 40,00 de frete, quando informar PA deve-se cobrar R$ 55,00 de frete, quando for enviado para SP não deve se cobrar frete e para os demais cobrar R$ 20,00 frete.
-> - Quando for informado o estado de RJ, MG, DF devem ser cobrados 2.89% de tributos sobre o valor total da compra e 3.75% para os demais.
->  - Quando for informado compra a credito e enviar para estados MG, DF e GO, deve-se dividir ICMS do produto em 2 e somar ao valor total da compra, para os demais deve-se somar o ICMS ao valor da compra.
->  - Quanto a compra for debito e o valor da compra for superior a R$ 1000,00 deve-se dar 5% de desconto sobre o valor da compra sem impostos, taxas e frete, quando o valor da compra for múltiplo de 1000 até o máximo de 10000 deve-se acrescentar 1.67% de desconto a cada múltiplo de 1000 somados aos 5% já concedidos.
-> 		- Acima de R$ 1000,00, desconto de 5% = R$ 950,00
-> 		- Múltiplo de 1000 é 2000, desconto de 5% + 1,67% = R$ 1866,6
-> 		- Múltiplo de 2000 é 4000, desconto de 5% + 1,67% de 2000 + 1,67% de 4000 = R$ 3666,4.
 > - Não deve permitir concluir compra se cartão não possuir saldo.
 
 #### Requisitos não funcionais
 > - Usar TDD
 > - SOLID
 > - Clean Architecture
-> - Escrever um código em toda a equipe concorde, independente da qualidade.
+> - Escrever um código em que toda a equipe concorde, independente da qualidade.
 > - Código não pode ter dependências com bibliotecas externas, excepcionalmente Lombok*.
 > - Obrigatoriamente se divirtam ou parem.
-> - Escolham o modelo Dojo que mais gostam.
 
 #### Referencias de estrutura de Clean Architecture
 
