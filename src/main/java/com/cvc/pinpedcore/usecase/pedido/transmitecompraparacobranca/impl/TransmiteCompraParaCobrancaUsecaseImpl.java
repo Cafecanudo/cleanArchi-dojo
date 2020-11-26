@@ -1,8 +1,8 @@
-package com.cvc.pinpedcore.usecase.transmitecompraparacobranca.impl;
+package com.cvc.pinpedcore.usecase.pedido.transmitecompraparacobranca.impl;
 
 import com.cvc.pinpedcore.models.Pedido;
-import com.cvc.pinpedcore.usecase.transmitecompraparacobranca.TransmiteCompraParaCobrancaUsecase;
-import com.cvc.pinpedcore.usecase.transmitecompraparacobranca.AdquirenteGateway;
+import com.cvc.pinpedcore.usecase.pedido.transmitecompraparacobranca.TransmiteCompraParaCobrancaUsecase;
+import com.cvc.pinpedcore.usecase.pedido.transmitecompraparacobranca.AdquirenteGateway;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

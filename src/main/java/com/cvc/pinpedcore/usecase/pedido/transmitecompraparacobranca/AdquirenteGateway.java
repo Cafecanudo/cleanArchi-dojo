@@ -1,4 +1,4 @@
-package com.cvc.pinpedcore.usecase.transmitecompraparacobranca;
+package com.cvc.pinpedcore.usecase.pedido.transmitecompraparacobranca;
 
 import com.cvc.pinpedcore.models.Pedido;
 

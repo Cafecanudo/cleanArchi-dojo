@@ -1,4 +1,4 @@
-package com.cvc.pinpedcore.usecase.criapedido;
+package com.cvc.pinpedcore.usecase.pedido.criapedido;
 
 import com.cvc.pinpedcore.models.Pedido;
 
