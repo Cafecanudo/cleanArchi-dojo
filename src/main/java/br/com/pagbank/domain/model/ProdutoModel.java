@@ -9,4 +9,8 @@ public class ProdutoModel {
 
   private String descricao;
   private int quantidade;
+
+  public boolean isValid() {
+    return getDescricao() != null && !getDescricao().isEmpty() && getQuantidade() > 0;
+  }
 }

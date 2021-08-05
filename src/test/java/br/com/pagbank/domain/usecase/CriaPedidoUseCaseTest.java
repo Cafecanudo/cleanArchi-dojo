@@ -1,5 +1,7 @@
 package br.com.pagbank.domain.usecase;
 
+import br.com.pagbank.domain.config.exception.PedidoInvalidoException;
+import br.com.pagbank.domain.config.exception.ProdutosInvalidoException;
 import br.com.pagbank.domain.gateway.CriaPedidoGateway;
 import br.com.pagbank.domain.model.MeioDePagamentoEnum;
 import br.com.pagbank.domain.model.PedidoModel;
@@ -86,21 +88,75 @@ public class CriaPedidoUseCaseTest {
     PedidoModel pedido_criado = this.useCase.cria(pedido);
     Assert.assertEquals(0.00d, pedido_criado.getFrete(), 1);
   }
-  
+
   @Test
   public void quandoForInformadoCobrarFrete20Reais() {
     PedidoModel pedido = criaPedido("MG");
-    
+
     PedidoModel pedido_criado = this.useCase.cria(pedido);
     Assert.assertEquals(20.00d, pedido_criado.getFrete(), 1);
   }
-  
+
   @Test
   public void quandoForInformadoCobrarFrete70Reais() {
     PedidoModel pedido = criaPedido("RN");
-    
+
     PedidoModel pedido_criado = this.useCase.cria(pedido);
     Assert.assertEquals(70.00d, pedido_criado.getFrete(), 1);
+  }
+
+  @Test
+  public void deveRetornaExcecaoQuandoModelForNull() {
+    Assert.assertThrows(PedidoInvalidoException.class, () -> this.useCase.cria(null));
+  }
+
+  @Test
+  public void deveRetornaExcecaoQuandoModelPedidoInvalido() {
+    Assert.assertThrows(
+        PedidoInvalidoException.class,
+        () ->
+            this.useCase.cria(
+                PedidoModel.builder()
+                    .meioDePagamento(MeioDePagamentoEnum.CREDITO)
+                    .numeroCartaoCredito("5538 8032 6713 8110")
+                    .quantidadeParcela(12)
+                    .produtos(
+                        Arrays.asList(
+                            ProdutoModel.builder().descricao("Produto 1").quantidade(10).build(),
+                            ProdutoModel.builder().descricao("Produto 2").quantidade(20).build()))
+                    .build()));
+  }
+
+  @Test
+  public void deveRetornaExcecaoQuandoModelPedidodalido() {
+    Assert.assertThrows(
+        PedidoInvalidoException.class,
+        () ->
+            this.useCase.cria(
+                PedidoModel.builder()
+                    .estado("DF")
+                    .numeroCartaoCredito("5538 8032 6713 8110")
+                    .quantidadeParcela(12)
+                    .produtos(
+                        Arrays.asList(
+                            ProdutoModel.builder().descricao("Produto 1").quantidade(10).build(),
+                            ProdutoModel.builder().descricao("Produto 2").quantidade(20).build()))
+                    .build()));
+  }
+
+  @Test
+  public void deveRetornaExcecaoQuandoProdutosInvalidos() {
+    Assert.assertThrows(
+        ProdutosInvalidoException.class,
+        () ->
+            this.useCase.cria(
+                PedidoModel.builder()
+                    .estado("DF")
+                    .meioDePagamento(MeioDePagamentoEnum.CREDITO)
+                    .numeroCartaoCredito("5538 8032 6713 8110")
+                    .quantidadeParcela(12)
+                    .produtos(Arrays.asList(ProdutoModel.builder().build()))
+                    .build()));
   }
 
   private PedidoModel criaPedido(String pa) {
